@@ -46,6 +46,7 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("Sorted numbers:");
             
             Array.Sort(numbers);
+
             NumberPrinter(numbers);
 
             Console.WriteLine("\n************End Arrays*************** \n");
@@ -119,16 +120,18 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            for (int i = 0; i < numberList.Count - 1 && i >= 0; i--)
+            for (int i = numberList.Count - 1; i >=0; i--)
             {
                 if (numberList[i] % 2 != 0)
                 {
                     numberList.Remove(numberList[i]);
                 }
+                
             }
 
             NumberPrinter(numberList);
         }
+
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
         {
